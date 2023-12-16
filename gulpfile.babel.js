@@ -58,7 +58,8 @@ export const styles = () => {
      .pipe(sass().on('error', sass.logError))
      .pipe(gulpif(PRODUCTION,cleanCSS({compatibility: 'ie8'})))
      .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
-     .pipe(gulp.dest(paths.styles.dest));
+     .pipe(gulp.dest(paths.styles.dest))
+     .pipe(server.stream());
 }
 
 export const images = () => {
@@ -69,7 +70,8 @@ export const images = () => {
 }
 
 export const watch = () => {
-     gulp.watch('src/assets/scss/**/*.scss', gulp.series(styles,reload));
+    // gulp.watch('src/assets/scss/**/*.scss', gulp.series(styles,reload));
+     gulp.watch('src/assets/scss/**/*.scss', styles);
      gulp.watch('src/assets/js/**/*.js', gulp.series(scripts, reload));
      gulp.watch('**/*.php', reload);
      gulp.watch(paths.images.src, gulp.series(images, reload));
