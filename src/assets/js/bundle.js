@@ -1,9 +1,9 @@
 
-//import 'jquery';
+import $ from 'jquery';
 import './components/slider';
-
+//const $ = jQuery;
 let x = 0;
 //console.log(x);
-jQuery('body').click(() => {
+$('body').click(() => {
     alert(true)
 })

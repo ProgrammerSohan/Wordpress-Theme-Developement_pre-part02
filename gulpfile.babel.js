@@ -88,6 +88,9 @@ export const scripts = () => {
               // filename: 'bundle.js'
                filename: '[name].js'
           },
+          externals: {
+               jquery: 'jQuery'
+          },
           devtool: !PRODUCTION ? 'inline-source-map' : false
      }))
      .pipe(gulpif(PRODUCTION, uglify()))
