@@ -27,6 +27,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.0",
+    "gulp-zip": "^4.1.0",
     "sass": "^1.69.5",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^4.0.3",
