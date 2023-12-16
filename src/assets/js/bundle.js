@@ -1,6 +1,9 @@
 
-import 'jquery';
+//import 'jquery';
 import './components/slider';
 
 let x = 0;
-console.log(x);
+//console.log(x);
+jQuery('body').click(() => {
+    alert(true)
+})
